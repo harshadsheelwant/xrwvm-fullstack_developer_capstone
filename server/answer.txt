@@ -1,0 +1,14 @@
+curl -X GET "http://127.0.0.1:8000/fetchReviews/dealer/15"
+{"dealerId":15,"reviews":[{"id":101,"name":"Jane Doe","review":"Great service and friendly staff!","purchase":true,"purchase_date":"2024-11-02","car_make":"Toyota","car_model":"Camry","car_year":2021},{"id":102,"name":"John Smith","review":"Smooth buying experience and excellent follow-up.","purchase":true,"purchase_date":"2024-10-15","car_make":"Honda","car_model":"Accord","car_year":2020}]}
+
+curl -X GET "http://127.0.0.1:8000/fetchDealers"
+[{"id":1,"city":"Kansas City","state":"KS","st":"KS","address":"123 Main St","zip":"64106","lat":39.0997,"long":-94.5786},{"id":2,"city":"Topeka","state":"KS","st":"KS","address":"456 Elm St","zip":"66604","lat":39.0489,"long":-95.6780},{"id":3,"city":"Wichita","state":"KS","st":"KS","address":"789 Oak Ave","zip":"67202","lat":37.6872,"long":-97.3301}]
+
+curl -X GET "http://127.0.0.1:8000/fetchDealer/15"
+{"id":15,"city":"Overland Park","state":"KS","st":"KS","address":"321 Maple Blvd","zip":"66212","lat":38.9822,"long":-94.6708,"full_name":"Best Cars of Overland Park","short_name":"Best Cars","st":"KS"}
+
+curl -X GET "http://127.0.0.1:8000/fetchDealers/Kansas"
+[{"id":1,"city":"Kansas City","state":"Kansas","st":"KS","address":"123 Main St","zip":"64106"},{"id":2,"city":"Topeka","state":"Kansas","st":"KS","address":"456 Elm St","zip":"66604"},{"id":3,"city":"Wichita","state":"Kansas","st":"KS","address":"789 Oak Ave","zip":"67202"}]
+
+curl -X GET "http://127.0.0.1:8000/djangoapp/get_cars"
+[{"id":1,"make":"Toyota","description":"Reliable Japanese brand known for fuel efficiency and longevity.","country":"Japan","website":"https://www.toyota.com"},{"id":2,"make":"Ford","description":"American automaker famous for trucks, performance cars, and SUVs.","country":"USA","website":"https://www.ford.com"},{"id":3,"make":"BMW","description":"German luxury manufacturer with sporty sedans and premium SUVs.","country":"Germany","website":"https://www.bmw.com"}]
